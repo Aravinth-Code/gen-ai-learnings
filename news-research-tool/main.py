@@ -55,7 +55,6 @@ query = main_placeholder.text_input("Question: ")
 if query:
     if os.path.exists(filepath):
         embeddings = OpenAIEmbeddings()
-
         vectorstore = FAISS.load_local(
             filepath,
             embeddings,
